@@ -18,47 +18,55 @@
 </head>
 
 <body>
-  <div>
-    <nav class="navbar  fixed-top navbar-dark bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="{{url_for('static',filename='images/cv.png')}}" alt="" width="30" height="30"
-            class="d-inline-block align-text-top">
-          Job Application
-        </a>
-      </div>
-    </nav>
+  {% include 'nav.html' %}
 
-  </div>
-
+  <!-- Image Section -->
   <div style="margin-top: 55px;">
     <img class="img-fluid" id="banner" src="{{ url_for('static' , filename = '/images/banner.jpg')}}">
-
   </div>
 
   <div class=" container ">
-
-
     <h1 class="text-center my-5">{{portal_name}} Career</h1>
 
-    <h2 class="text-center my-5"> Jovian</h2>
-    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-      nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
-    <h2 class="my-5 text-center">Job Openings</h2>
+    <!-- About us -->
+    <h2 class="text-center my-5"> About Us!</h2>
 
+    <div class="row">
+      <div class="col-md-6">
+        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip
+          ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+          fugiat
+          nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+          id
+          est laborum.</p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+        <img style="height: 320px; border-radius:4xp" src="{{url_for('static',filename='images/people.jpg')}}" alt=""
+          height="320px">
+      </div>
+    </div>
+
+
+    <!-- Jobs openings -->
+    <h2 class="my-5 text-center">Job Openings</h2>
     {% for job in jobs %}
     {% include 'joblist.html' %}
-
     {% endfor %}
 
 
     <div class="text-center ">
-      <button class="btn btn-primary btn-lg my-3">Contact Us</button>
-      <footer class="my-3">Dhruv Maheshwari</footer>
+      <a href="mailto:rkatiyar885gmail.com?subject=APPLICATION%20FORM&body=Current%20company%3A%20%3Cname%3E%0D%0ACurrent%20ctc%3A%20%3Cctc%3E%0D%0A"
+        class="btn btn-primary btn-lg my-3">Contact Us</a>
+      <!-- <a href="mailto:no-one@snai1mai1.com?subject=free chocolate">example</a> -->
+
     </div>
+    {% include 'footer.html' %}
+
+
+
 
 
   </div>
