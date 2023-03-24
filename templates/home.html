@@ -11,21 +11,37 @@
 
   <style>
     #banner {
-      height: 360px;
+      height: 400px;
       width: 100%;
-      object-fit: cover;
-      margin-bottom: 16px;
     }
   </style>
 </head>
 
 <body>
+  <div>
+    <nav class="navbar  fixed-top navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="{{url_for('static',filename='images/cv.png')}}" alt="" width="30" height="30"
+            class="d-inline-block align-text-top">
+          Job Application
+        </a>
+      </div>
+    </nav>
+
+  </div>
+
+  <div style="margin-top: 55px;">
+    <img class="img-fluid" id="banner" src="{{ url_for('static' , filename = '/images/banner.jpg')}}">
+
+  </div>
+
   <div class=" container ">
 
 
     <h1 class="text-center my-5">{{portal_name}} Career</h1>
-    <img id="banner" src="{{ url_for('static' , filename = '/images/banner.jpg')}}">
-    <h2 class="text-center my-5">About Jovian</h2>
+
+    <h2 class="text-center my-5"> Jovian</h2>
     <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
       ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
