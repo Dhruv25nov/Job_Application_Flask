@@ -1,0 +1,35 @@
+{% include 'header.html' %}
+<div class=" container lead">
+    <h3 class="my-4">{{job.title.upper()}}</h3>
+
+    <h4>Location</h4>
+    <p>{{job.location}}</p>
+
+    <h4>Responsibilites</h4>
+    <p>
+    <ul>
+        {% for line in job.responsibilities.replace('"', '').split("\n") %}
+
+        <li>{{line}}</li>
+
+        {% endfor %}
+    </ul>
+    </p>
+
+    <h4>Salary</h4>
+    <p>{{job.currency}}{{job.salary}}</p>
+
+    <h4>Requirements</h4>
+    <p>
+    <ol>
+        {% for line in job.requirements.replace('"','').split("\n") %}
+        <li>{{line}}</li>
+        {% endfor %}
+    </ol>
+    </p>
+
+</div>
+
+{% include 'application_form.html' %}
+
+{% include 'footer.html' %}

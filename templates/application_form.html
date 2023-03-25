@@ -1,0 +1,53 @@
+<div class=" lead container">
+    <h3 class="text-center my-5">APPLICATION FORM</h3>
+    <form action="/job/{{job['id']}}/apply" method="POST">
+
+        <div class=" row ">
+            <div class="mb-3 col-md-6 ">
+                <label for="name" class="form-label ">Name</label>
+                <input name="name" type="text" class=" form-control  " id="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="mb-3 col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input name="email" type="email" class="form-control" id="email" placeholder="sample@email.com"
+                    required>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-md-6">
+                <label for="linkedin" class="form-label">Linkedin URL</label>
+                <input name="linkedin" type="text" class="form-control " id="linkedin"
+                    placeholder="https://www.linkedin.com/" required>
+            </div>
+
+            <div class="mb-3 col-md-6">
+                <label for="resume" class="form-label">Resume URL</label>
+                <input name="resume" type="text" class="form-control" id="resume" placeholder="https://www.resume.com/"
+                    required>
+            </div>
+
+        </div>
+
+
+        <div class="mb-3">
+            <label for="education" class="form-label">Education</label>
+            <textarea name="education" class="form-control" id="education" rows="3" required></textarea>
+        </div>
+
+
+        <div class="mb-3 ">
+            <label for="work" class="form-label">WorkExperience</label>
+            <textarea name="experience" class="form-control" id="work" rows="3" required></textarea>
+        </div>
+
+        <div class="text-center ">
+            <button type="submit" class="my-3 btn btn-primary btn-lg">Submit</button>
+
+        </div>
+
+    </form>
+
+</div>
